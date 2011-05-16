@@ -7,12 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CMQueue.h"
 
 @interface CMCompressor : NSObject {
-NSURL *destination;
+    @private
+    NSURL *destination;
+    NSMutableArray *packageQueue;
 }
 
-- (CMCompressor *)initWithDestinationURL: (NSURL *)aDestination;
+- (CMCompressor *)init;
 - (void)setDestination: (NSURL *)destinationURL;
 - (NSURL *)destination;
 - (void)addFileAtURL: (NSURL *)atURL;

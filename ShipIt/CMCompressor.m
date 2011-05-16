@@ -10,16 +10,16 @@
 
 @implementation CMCompressor
 
-- (CMCompressor *)initWithDestinationURL: (NSURL *)destinationURL {
-	self = [super init];
-	if (self) {
-		[self setDestination: destinationURL];
-		return self;
-	}
-	return nil;
+- (CMCompressor *)init {
+    self = [super init];
+    if (self) {
+        packageQueue = [[NSMutableArray array] retain]; 
+    }
+    return self;
 }
 
 - (void)dealloc {
+    [packageQueue release];
 	[destination release];
 	[super dealloc];
 }
@@ -31,7 +31,7 @@
 }
 
 - (void)addFileAtURL:(NSURL *)atURL {
-	//[compression addFileAtURL: atURL];
+    [packageQueue enqueue: atURL];
 }
 
 - (NSURL *)destination {
