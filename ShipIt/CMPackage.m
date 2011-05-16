@@ -14,10 +14,9 @@
 -(CMPackage *)init {
     self = [super init];
     if(self) {
-        packageFiles = [NSArray array];
-        [packageFiles retain];
+        packageFiles = [[NSMutableArray array] retain];
     }
-    return nil;
+    return self;
 }
 
 -(void)dealloc {
