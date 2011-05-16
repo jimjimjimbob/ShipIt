@@ -11,12 +11,18 @@
 		143AD93D1380C43000E69CB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143AD93B1380C43000E69CB3 /* InfoPlist.strings */; };
 		143AD9401380C43000E69CB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD93F1380C43000E69CB3 /* main.m */; };
 		143AD9431380C43000E69CB3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9411380C43000E69CB3 /* Credits.rtf */; };
-		143AD9461380C43000E69CB3 /* ShipItAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9451380C43000E69CB3 /* ShipItAppDelegate.m */; };
 		143AD9491380C43000E69CB3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9471380C43000E69CB3 /* MainMenu.xib */; };
 		143AD9501380C43100E69CB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9321380C43000E69CB3 /* Cocoa.framework */; };
 		143AD9581380C43100E69CB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9561380C43100E69CB3 /* InfoPlist.strings */; };
 		143AD95B1380C43100E69CB3 /* ShipItTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 143AD95A1380C43100E69CB3 /* ShipItTests.h */; };
 		143AD95D1380C43100E69CB3 /* ShipItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD95C1380C43100E69CB3 /* ShipItTests.m */; };
+		143AD96F1380C48C00E69CB3 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9671380C48C00E69CB3 /* AppController.m */; };
+		143AD9701380C48C00E69CB3 /* CMCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9691380C48C00E69CB3 /* CMCompressor.m */; };
+		143AD9711380C48C00E69CB3 /* CMDroppableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD96B1380C48C00E69CB3 /* CMDroppableView.m */; };
+		143AD9721380C48C00E69CB3 /* CMPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD96D1380C48C00E69CB3 /* CMPackage.m */; };
+		143AD9741380C55A00E69CB3 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9731380C55A00E69CB3 /* Carbon.framework */; };
+		143AD9761380C5A500E69CB3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9751380C5A500E69CB3 /* ScriptingBridge.framework */; };
+		143AD97C1380C9E100E69CB3 /* CMQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD97B1380C9E100E69CB3 /* CMQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +41,31 @@
 		143AD9351380C43000E69CB3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		143AD9361380C43000E69CB3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		143AD9371380C43000E69CB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		143AD93A1380C43000E69CB3 /* ShipIt-Info.plist */ = {isa = PBXFileReference; path = "ShipIt-Info.plist"; sourceTree = "<group>"; };
+		143AD93A1380C43000E69CB3 /* ShipIt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShipIt-Info.plist"; sourceTree = "<group>"; };
 		143AD93C1380C43000E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		143AD93E1380C43000E69CB3 /* ShipIt-Prefix.pch */ = {isa = PBXFileReference; path = "ShipIt-Prefix.pch"; sourceTree = "<group>"; };
+		143AD93E1380C43000E69CB3 /* ShipIt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShipIt-Prefix.pch"; sourceTree = "<group>"; };
 		143AD93F1380C43000E69CB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		143AD9421380C43000E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		143AD9441380C43000E69CB3 /* ShipItAppDelegate.h */ = {isa = PBXFileReference; path = ShipItAppDelegate.h; sourceTree = "<group>"; };
-		143AD9451380C43000E69CB3 /* ShipItAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipItAppDelegate.m; sourceTree = "<group>"; };
 		143AD9481380C43000E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		143AD94F1380C43100E69CB3 /* ShipItTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShipItTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		143AD9551380C43100E69CB3 /* ShipItTests-Info.plist */ = {isa = PBXFileReference; path = "ShipItTests-Info.plist"; sourceTree = "<group>"; };
+		143AD9551380C43100E69CB3 /* ShipItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShipItTests-Info.plist"; sourceTree = "<group>"; };
 		143AD9571380C43100E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		143AD9591380C43100E69CB3 /* ShipItTests-Prefix.pch */ = {isa = PBXFileReference; path = "ShipItTests-Prefix.pch"; sourceTree = "<group>"; };
+		143AD9591380C43100E69CB3 /* ShipItTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShipItTests-Prefix.pch"; sourceTree = "<group>"; };
 		143AD95A1380C43100E69CB3 /* ShipItTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipItTests.h; sourceTree = "<group>"; };
 		143AD95C1380C43100E69CB3 /* ShipItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipItTests.m; sourceTree = "<group>"; };
+		143AD9661380C48C00E69CB3 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		143AD9671380C48C00E69CB3 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		143AD9681380C48C00E69CB3 /* CMCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCompressor.h; sourceTree = "<group>"; };
+		143AD9691380C48C00E69CB3 /* CMCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCompressor.m; sourceTree = "<group>"; };
+		143AD96A1380C48C00E69CB3 /* CMDroppableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDroppableView.h; sourceTree = "<group>"; };
+		143AD96B1380C48C00E69CB3 /* CMDroppableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDroppableView.m; sourceTree = "<group>"; };
+		143AD96C1380C48C00E69CB3 /* CMPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPackage.h; sourceTree = "<group>"; };
+		143AD96D1380C48C00E69CB3 /* CMPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPackage.m; sourceTree = "<group>"; };
+		143AD96E1380C48C00E69CB3 /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
+		143AD9731380C55A00E69CB3 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		143AD9751380C5A500E69CB3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		143AD97A1380C9E100E69CB3 /* CMQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQueue.h; sourceTree = "<group>"; };
+		143AD97B1380C9E100E69CB3 /* CMQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143AD9761380C5A500E69CB3 /* ScriptingBridge.framework in Frameworks */,
+				143AD9741380C55A00E69CB3 /* Carbon.framework in Frameworks */,
 				143AD9331380C43000E69CB3 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +112,8 @@
 		143AD9311380C43000E69CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				143AD9751380C5A500E69CB3 /* ScriptingBridge.framework */,
+				143AD9731380C55A00E69CB3 /* Carbon.framework */,
 				143AD9321380C43000E69CB3 /* Cocoa.framework */,
 				143AD9341380C43000E69CB3 /* Other Frameworks */,
 			);
@@ -112,10 +133,19 @@
 		143AD9381380C43000E69CB3 /* ShipIt */ = {
 			isa = PBXGroup;
 			children = (
-				143AD9441380C43000E69CB3 /* ShipItAppDelegate.h */,
-				143AD9451380C43000E69CB3 /* ShipItAppDelegate.m */,
+				143AD9671380C48C00E69CB3 /* AppController.m */,
+				143AD9661380C48C00E69CB3 /* AppController.h */,
+				143AD9681380C48C00E69CB3 /* CMCompressor.h */,
+				143AD9691380C48C00E69CB3 /* CMCompressor.m */,
+				143AD96A1380C48C00E69CB3 /* CMDroppableView.h */,
+				143AD96B1380C48C00E69CB3 /* CMDroppableView.m */,
+				143AD96C1380C48C00E69CB3 /* CMPackage.h */,
+				143AD96D1380C48C00E69CB3 /* CMPackage.m */,
+				143AD96E1380C48C00E69CB3 /* Finder.h */,
 				143AD9471380C43000E69CB3 /* MainMenu.xib */,
 				143AD9391380C43000E69CB3 /* Supporting Files */,
+				143AD97A1380C9E100E69CB3 /* CMQueue.h */,
+				143AD97B1380C9E100E69CB3 /* CMQueue.m */,
 			);
 			path = ShipIt;
 			sourceTree = "<group>";
@@ -258,7 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				143AD9401380C43000E69CB3 /* main.m in Sources */,
-				143AD9461380C43000E69CB3 /* ShipItAppDelegate.m in Sources */,
+				143AD96F1380C48C00E69CB3 /* AppController.m in Sources */,
+				143AD9701380C48C00E69CB3 /* CMCompressor.m in Sources */,
+				143AD9711380C48C00E69CB3 /* CMDroppableView.m in Sources */,
+				143AD9721380C48C00E69CB3 /* CMPackage.m in Sources */,
+				143AD97C1380C9E100E69CB3 /* CMQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
