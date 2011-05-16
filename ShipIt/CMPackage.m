@@ -32,7 +32,7 @@
     return [NSArray arrayWithArray: packageFiles];
 }
 
--(unsigned int)size {
+-(NSUInteger)size {
     return [packageFiles count];
 }
 

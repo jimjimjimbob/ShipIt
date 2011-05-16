@@ -12,13 +12,10 @@
 @interface CMPackage : NSObject {
     @private
     NSMutableArray *packageFiles;
-    
-    @public
-    NSString *packageStatus;
 }
 
 -(CMPackage *)init;
 -(void)addURLToPackage:(NSURL *)aURL;
 -(NSArray *)packageContentsAsArray;
--(unsigned int)size;
+-(NSUInteger)size;
 @end

@@ -12,14 +12,10 @@
 
 - (CMCompressor *)init {
     self = [super init];
-    if (self) {
-        packageQueue = [[NSMutableArray array] retain]; 
-    }
     return self;
 }
 
 - (void)dealloc {
-    [packageQueue release];
 	[destination release];
 	[super dealloc];
 }
@@ -30,15 +26,11 @@
 	destination = destinationURL;
 }
 
-- (void)addFileAtURL:(NSURL *)atURL {
-    [packageQueue enqueue: atURL];
-}
-
 - (NSURL *)destination {
 	return destination;
 }
 
-- (BOOL)compress {
+- (BOOL)compressPackage: (CMPackage *)aPackage {
 	return TRUE;
 }
 @end

@@ -38,7 +38,6 @@
 }
 
 - (void)rightMouseDown:(NSEvent *)event {
-    // Treat right-click just like left-click
     [self mouseDown:event];
 }
 
@@ -156,7 +155,9 @@
 - (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
     if ([delegate respondsToSelector:@selector(concludeDragOperation:)]) {
         [delegate concludeDragOperation: sender];
-    }   
+    }
+    isDragActive = NO;
+    [self setNeedsDisplay: YES];
 }
 
 @end
