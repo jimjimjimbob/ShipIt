@@ -11,7 +11,10 @@
 }
 
 - (IBAction) packageAndShare: (id) sender;
-//- (void) populateFilesWithFinderSelection;
-//- (void) registerGlobalHotKey;
 
+@end
+
+@interface AppController (Private)
+- (void)populateFilesWithFinderSelection;
+- (void)registerGlobalHotKey;
 @end

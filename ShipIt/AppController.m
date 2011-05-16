@@ -1,13 +1,10 @@
 #import "AppController.h"
 #import "Finder.h"
+#import "CMPackage.h"
+#import "CMCompressor.h"
 #import <Carbon/Carbon.h>
 
 OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
-
-@interface AppController (Private)
-- (void)populateFilesWithFinderSelection;
-- (void)registerGlobalHotKey;
-@end
 
 @implementation AppController (Private)
 
@@ -37,6 +34,14 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 
 @implementation AppController
 
+- (AppController *)init {
+    self = [super init];
+    if(self) {
+        compressor = [[CMCompressor alloc] init];
+    }
+    return self;
+}
+
 - (void)awakeFromNib {
 	[self registerGlobalHotKey];
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
@@ -54,6 +59,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 }
 
 - (void)dealloc {
+    [compressor release];
 	[statusItem release];
     [statusItemView release];
 	[super dealloc];
