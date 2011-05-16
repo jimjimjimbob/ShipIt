@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		143AD9331380C43000E69CB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9321380C43000E69CB3 /* Cocoa.framework */; };
+		143AD93D1380C43000E69CB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143AD93B1380C43000E69CB3 /* InfoPlist.strings */; };
+		143AD9401380C43000E69CB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD93F1380C43000E69CB3 /* main.m */; };
+		143AD9431380C43000E69CB3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9411380C43000E69CB3 /* Credits.rtf */; };
+		143AD9461380C43000E69CB3 /* ShipItAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9451380C43000E69CB3 /* ShipItAppDelegate.m */; };
+		143AD9491380C43000E69CB3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9471380C43000E69CB3 /* MainMenu.xib */; };
+		143AD9501380C43100E69CB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9321380C43000E69CB3 /* Cocoa.framework */; };
+		143AD9581380C43100E69CB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9561380C43100E69CB3 /* InfoPlist.strings */; };
+		143AD95B1380C43100E69CB3 /* ShipItTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 143AD95A1380C43100E69CB3 /* ShipItTests.h */; };
+		143AD95D1380C43100E69CB3 /* ShipItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD95C1380C43100E69CB3 /* ShipItTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		143AD9511380C43100E69CB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 143AD9251380C43000E69CB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 143AD92D1380C43000E69CB3;
+			remoteInfo = ShipIt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		143AD92E1380C43000E69CB3 /* ShipIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		143AD9321380C43000E69CB3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		143AD9351380C43000E69CB3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		143AD9361380C43000E69CB3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		143AD9371380C43000E69CB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		143AD93A1380C43000E69CB3 /* ShipIt-Info.plist */ = {isa = PBXFileReference; path = "ShipIt-Info.plist"; sourceTree = "<group>"; };
+		143AD93C1380C43000E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		143AD93E1380C43000E69CB3 /* ShipIt-Prefix.pch */ = {isa = PBXFileReference; path = "ShipIt-Prefix.pch"; sourceTree = "<group>"; };
+		143AD93F1380C43000E69CB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		143AD9421380C43000E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		143AD9441380C43000E69CB3 /* ShipItAppDelegate.h */ = {isa = PBXFileReference; path = ShipItAppDelegate.h; sourceTree = "<group>"; };
+		143AD9451380C43000E69CB3 /* ShipItAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipItAppDelegate.m; sourceTree = "<group>"; };
+		143AD9481380C43000E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		143AD94F1380C43100E69CB3 /* ShipItTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShipItTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		143AD9551380C43100E69CB3 /* ShipItTests-Info.plist */ = {isa = PBXFileReference; path = "ShipItTests-Info.plist"; sourceTree = "<group>"; };
+		143AD9571380C43100E69CB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		143AD9591380C43100E69CB3 /* ShipItTests-Prefix.pch */ = {isa = PBXFileReference; path = "ShipItTests-Prefix.pch"; sourceTree = "<group>"; };
+		143AD95A1380C43100E69CB3 /* ShipItTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipItTests.h; sourceTree = "<group>"; };
+		143AD95C1380C43100E69CB3 /* ShipItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipItTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		143AD92B1380C43000E69CB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143AD9331380C43000E69CB3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143AD94B1380C43100E69CB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143AD9501380C43100E69CB3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		143AD9231380C43000E69CB3 = {
+			isa = PBXGroup;
+			children = (
+				143AD9381380C43000E69CB3 /* ShipIt */,
+				143AD9531380C43100E69CB3 /* ShipItTests */,
+				143AD9311380C43000E69CB3 /* Frameworks */,
+				143AD92F1380C43000E69CB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		143AD92F1380C43000E69CB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				143AD92E1380C43000E69CB3 /* ShipIt.app */,
+				143AD94F1380C43100E69CB3 /* ShipItTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		143AD9311380C43000E69CB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143AD9321380C43000E69CB3 /* Cocoa.framework */,
+				143AD9341380C43000E69CB3 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		143AD9341380C43000E69CB3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143AD9351380C43000E69CB3 /* AppKit.framework */,
+				143AD9361380C43000E69CB3 /* CoreData.framework */,
+				143AD9371380C43000E69CB3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		143AD9381380C43000E69CB3 /* ShipIt */ = {
+			isa = PBXGroup;
+			children = (
+				143AD9441380C43000E69CB3 /* ShipItAppDelegate.h */,
+				143AD9451380C43000E69CB3 /* ShipItAppDelegate.m */,
+				143AD9471380C43000E69CB3 /* MainMenu.xib */,
+				143AD9391380C43000E69CB3 /* Supporting Files */,
+			);
+			path = ShipIt;
+			sourceTree = "<group>";
+		};
+		143AD9391380C43000E69CB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				143AD93A1380C43000E69CB3 /* ShipIt-Info.plist */,
+				143AD93B1380C43000E69CB3 /* InfoPlist.strings */,
+				143AD93E1380C43000E69CB3 /* ShipIt-Prefix.pch */,
+				143AD93F1380C43000E69CB3 /* main.m */,
+				143AD9411380C43000E69CB3 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		143AD9531380C43100E69CB3 /* ShipItTests */ = {
+			isa = PBXGroup;
+			children = (
+				143AD95A1380C43100E69CB3 /* ShipItTests.h */,
+				143AD95C1380C43100E69CB3 /* ShipItTests.m */,
+				143AD9541380C43100E69CB3 /* Supporting Files */,
+			);
+			path = ShipItTests;
+			sourceTree = "<group>";
+		};
+		143AD9541380C43100E69CB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				143AD9551380C43100E69CB3 /* ShipItTests-Info.plist */,
+				143AD9561380C43100E69CB3 /* InfoPlist.strings */,
+				143AD9591380C43100E69CB3 /* ShipItTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		143AD92D1380C43000E69CB3 /* ShipIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143AD9601380C43100E69CB3 /* Build configuration list for PBXNativeTarget "ShipIt" */;
+			buildPhases = (
+				143AD92A1380C43000E69CB3 /* Sources */,
+				143AD92B1380C43000E69CB3 /* Frameworks */,
+				143AD92C1380C43000E69CB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShipIt;
+			productName = ShipIt;
+			productReference = 143AD92E1380C43000E69CB3 /* ShipIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		143AD94E1380C43100E69CB3 /* ShipItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143AD9631380C43100E69CB3 /* Build configuration list for PBXNativeTarget "ShipItTests" */;
+			buildPhases = (
+				143AD94A1380C43100E69CB3 /* Sources */,
+				143AD94B1380C43100E69CB3 /* Frameworks */,
+				143AD94C1380C43100E69CB3 /* Resources */,
+				143AD94D1380C43100E69CB3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				143AD9521380C43100E69CB3 /* PBXTargetDependency */,
+			);
+			name = ShipItTests;
+			productName = ShipItTests;
+			productReference = 143AD94F1380C43100E69CB3 /* ShipItTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		143AD9251380C43000E69CB3 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 143AD9281380C43000E69CB3 /* Build configuration list for PBXProject "ShipIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 143AD9231380C43000E69CB3;
+			productRefGroup = 143AD92F1380C43000E69CB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				143AD92D1380C43000E69CB3 /* ShipIt */,
+				143AD94E1380C43100E69CB3 /* ShipItTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		143AD92C1380C43000E69CB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143AD93D1380C43000E69CB3 /* InfoPlist.strings in Resources */,
+				143AD9431380C43000E69CB3 /* Credits.rtf in Resources */,
+				143AD9491380C43000E69CB3 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143AD94C1380C43100E69CB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143AD9581380C43100E69CB3 /* InfoPlist.strings in Resources */,
+				143AD95B1380C43100E69CB3 /* ShipItTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		143AD94D1380C43100E69CB3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		143AD92A1380C43000E69CB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143AD9401380C43000E69CB3 /* main.m in Sources */,
+				143AD9461380C43000E69CB3 /* ShipItAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		143AD94A1380C43100E69CB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143AD95D1380C43100E69CB3 /* ShipItTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		143AD9521380C43100E69CB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 143AD92D1380C43000E69CB3 /* ShipIt */;
+			targetProxy = 143AD9511380C43100E69CB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		143AD93B1380C43000E69CB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143AD93C1380C43000E69CB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		143AD9411380C43000E69CB3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143AD9421380C43000E69CB3 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		143AD9471380C43000E69CB3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143AD9481380C43000E69CB3 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		143AD9561380C43100E69CB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143AD9571380C43100E69CB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		143AD95E1380C43100E69CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		143AD95F1380C43100E69CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		143AD9611380C43100E69CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShipIt/ShipIt-Prefix.pch";
+				INFOPLIST_FILE = "ShipIt/ShipIt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		143AD9621380C43100E69CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShipIt/ShipIt-Prefix.pch";
+				INFOPLIST_FILE = "ShipIt/ShipIt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		143AD9641380C43100E69CB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShipIt.app/Contents/MacOS/ShipIt";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShipItTests/ShipItTests-Prefix.pch";
+				INFOPLIST_FILE = "ShipItTests/ShipItTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		143AD9651380C43100E69CB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShipIt.app/Contents/MacOS/ShipIt";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShipItTests/ShipItTests-Prefix.pch";
+				INFOPLIST_FILE = "ShipItTests/ShipItTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		143AD9281380C43000E69CB3 /* Build configuration list for PBXProject "ShipIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143AD95E1380C43100E69CB3 /* Debug */,
+				143AD95F1380C43100E69CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		143AD9601380C43100E69CB3 /* Build configuration list for PBXNativeTarget "ShipIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143AD9611380C43100E69CB3 /* Debug */,
+				143AD9621380C43100E69CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		143AD9631380C43100E69CB3 /* Build configuration list for PBXNativeTarget "ShipItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143AD9641380C43100E69CB3 /* Debug */,
+				143AD9651380C43100E69CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 143AD9251380C43000E69CB3 /* Project object */;
+}
