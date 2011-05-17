@@ -14,8 +14,8 @@
 @synthesize statusItem;
 @synthesize delegate;
 
-- (id)initWithFrame:(NSRect)frame {
-    self = [super initWithFrame:frame];
+- (id)init {
+    self = [super init];
     if (self) {
         statusItem = nil;
         title = @"";

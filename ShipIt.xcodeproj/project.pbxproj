@@ -133,19 +133,19 @@
 		143AD9381380C43000E69CB3 /* ShipIt */ = {
 			isa = PBXGroup;
 			children = (
-				143AD9671380C48C00E69CB3 /* AppController.m */,
 				143AD9661380C48C00E69CB3 /* AppController.h */,
+				143AD9671380C48C00E69CB3 /* AppController.m */,
 				143AD9681380C48C00E69CB3 /* CMCompressor.h */,
 				143AD9691380C48C00E69CB3 /* CMCompressor.m */,
 				143AD96A1380C48C00E69CB3 /* CMDroppableView.h */,
 				143AD96B1380C48C00E69CB3 /* CMDroppableView.m */,
 				143AD96C1380C48C00E69CB3 /* CMPackage.h */,
 				143AD96D1380C48C00E69CB3 /* CMPackage.m */,
+				143AD97A1380C9E100E69CB3 /* CMQueue.h */,
+				143AD97B1380C9E100E69CB3 /* CMQueue.m */,
 				143AD96E1380C48C00E69CB3 /* Finder.h */,
 				143AD9471380C43000E69CB3 /* MainMenu.xib */,
 				143AD9391380C43000E69CB3 /* Supporting Files */,
-				143AD97A1380C9E100E69CB3 /* CMQueue.h */,
-				143AD97B1380C9E100E69CB3 /* CMQueue.m */,
 			);
 			path = ShipIt;
 			sourceTree = "<group>";
