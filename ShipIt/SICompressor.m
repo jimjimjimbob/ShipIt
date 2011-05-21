@@ -6,11 +6,11 @@
 //  Copyright 2011 Codez4Mac.com. All rights reserved.
 //
 
-#import "CMCompressor.h"
+#import "SICompressor.h"
 
-@implementation CMCompressor
+@implementation SICompressor
 
-- (CMCompressor *)init {
+- (SICompressor *)init {
     self = [super init];
     return self;
 }
@@ -30,7 +30,7 @@
 	return destination;
 }
 
-- (BOOL)compressPackage: (CMPackage *)aPackage {
+- (BOOL)compressPackage: (SIPackage *)aPackage {
 	return TRUE;
 }
 @end

@@ -1,17 +1,17 @@
 //
-//  CMPackage.m
+//  SIPackage.m
 //  ShipIt!
 //
 //  Created by doomspork on 5/15/11.
 //  Copyright 2011 Codez4Mac.com. All rights reserved.
 //
 
-#import "CMPackage.h"
+#import "SIPackage.h"
 
 
-@implementation CMPackage
+@implementation SIPackage
 
--(CMPackage *)init {
+-(SIPackage *)init {
     self = [super init];
     if(self) {
         packageFiles = [[NSMutableArray array] retain];

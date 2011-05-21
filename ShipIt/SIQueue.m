@@ -1,15 +1,15 @@
 //
-//  CMQueue.m
+//  SIQueue.m
 //  ShipIt
 //
 //  Created by doomspork on 5/15/11.
 //  Copyright 2011 Codez4Mac.com. All rights reserved.
 //
 
-#import "CMQueue.h"
+#import "SIQueue.h"
 
 
-@implementation NSMutableArray (CMQueue)
+@implementation NSMutableArray (SIQueue)
 - (id) dequeue {
     id headObject = [self objectAtIndex:0];
     if (headObject != nil) {

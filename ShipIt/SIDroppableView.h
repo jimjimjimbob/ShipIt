@@ -1,5 +1,5 @@
 //
-//  CMDroppableView.h
+//  SIDroppableView.h
 //  ShipIt!
 //
 //  Created by doomspork on 5/14/11.
@@ -11,7 +11,7 @@
 #define StatusItemViewPaddingWidth  6
 #define StatusItemViewPaddingHeight 3
 
-@interface CMDroppableView : NSView <NSMenuDelegate>{
+@interface SIDroppableView : NSView <NSMenuDelegate>{
 	NSStatusItem *statusItem;
 	NSString *title;
     NSObject *delegate;

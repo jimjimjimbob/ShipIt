@@ -1,5 +1,5 @@
 //
-//  CMPluginController.h
+//  SIDeliveryController.h
 //  ShipIt
 //
 //  Created by Sean Callan on 5/19/11.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface CMPluginController : NSWindowController {
+@interface SIDeliveryController : NSWindowController {
 @private
     
 }

@@ -7,15 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CMPackage.h"
+#import "SIPackage.h"
 
-@interface CMCompressor : NSObject {
+@interface SICompressor : NSObject {
     @private
     NSURL *destination;
 }
 
-- (CMCompressor *)init;
+- (SICompressor *)init;
 - (void)setDestination: (NSURL *)destinationURL;
 - (NSURL *)destination;
-- (BOOL)compressPackage: (CMPackage *)aPackage;
+- (BOOL)compressPackage: (SIPackage *)aPackage;
 @end

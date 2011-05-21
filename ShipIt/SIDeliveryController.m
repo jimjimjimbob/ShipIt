@@ -1,15 +1,15 @@
 //
-//  CMPluginController.m
+//  SIDeliveryController.m
 //  ShipIt
 //
 //  Created by Sean Callan on 5/19/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "CMPluginController.h"
+#import "SIDeliveryController.h"
 
 
-@implementation CMPluginController
+@implementation SIDeliveryController
 
 - (id)initWithWindow:(NSWindow *)window
 {

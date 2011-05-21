@@ -1,5 +1,5 @@
 //
-//  CMPackage.h
+//  SIPackage.h
 //  ShipIt!
 //
 //  Created by doomspork on 5/15/11.
@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface CMPackage : NSObject {
+@interface SIPackage : NSObject {
     @private
     NSMutableArray *packageFiles;
 }
 
--(CMPackage *)init;
+-(SIPackage *)init;
 -(void)addURLToPackage:(NSURL *)aURL;
 -(NSArray *)packageContentsAsArray;
 -(NSUInteger)size;

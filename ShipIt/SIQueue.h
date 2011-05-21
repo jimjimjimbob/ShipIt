@@ -1,5 +1,5 @@
 //
-//  CMQueue.h
+//  SIQueue.h
 //  ShipIt
 //
 //  Created by doomspork on 5/15/11.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSMutableArray (CMQueue)
+@interface NSMutableArray (SIQueue)
 - (id)dequeue;
 - (void) enqueue:(id)obj;
 @end

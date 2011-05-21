@@ -1,15 +1,15 @@
 //
-//  CMDroppableView.m
+//  SIDroppableView.m
 //  ShipIt!
 //
 //  Created by doomspork on 5/14/11.
 //  Copyright 2011 Codez4Mac.com. All rights reserved.
 //
 
-#import "CMDroppableView.h"
+#import "SIDroppableView.h"
 
 
-@implementation CMDroppableView
+@implementation SIDroppableView
 
 @synthesize statusItem;
 @synthesize delegate;
