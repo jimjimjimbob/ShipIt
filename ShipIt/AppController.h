@@ -1,5 +1,5 @@
 #import <Cocoa/Cocoa.h>
-#import "SIDroppableView.h"
+#import "SIStatusItemView.h"
 #import "SICompressor.h"
 #import "SIQueue.h"
 
@@ -7,7 +7,7 @@
     @private
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
-    SIDroppableView *statusItemView;
+    SIStatusItemView *statusItemView;
     SICompressor *compressor;
     NSMutableArray *packageQueue;
 }

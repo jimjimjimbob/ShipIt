@@ -35,7 +35,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 	[self registerGlobalHotKey];
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 
-	statusItemView = [[SIDroppableView alloc] init];
+	statusItemView = [[SIStatusItemView alloc] init];
 	[statusItemView retain];
     [statusItemView setDelegate: self];
     [statusItemView setStatusItem: statusItem];
