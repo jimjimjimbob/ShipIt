@@ -2,8 +2,8 @@
 //  SIDeliveryController.m
 //  ShipIt
 //
-//  Created by Sean Callan on 5/19/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by doomspork on 5/19/11.
+//  Copyright 2011 Codez4Mac.com All rights reserved.
 //
 
 #import "SIDeliveryController.h"
