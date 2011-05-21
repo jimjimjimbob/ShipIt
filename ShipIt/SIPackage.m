@@ -11,6 +11,9 @@
 
 @implementation SIPackage
 
+@synthesize compressed;
+@synthesize name;
+
 -(SIPackage *)init {
     self = [super init];
     if(self) {

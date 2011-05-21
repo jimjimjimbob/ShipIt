@@ -11,8 +11,13 @@
 
 @interface SIPackage : NSObject {
     @private
+    NSString *name;
     NSMutableArray *packageFiles;
+    NSData *compressed;
 }
+
+@property (retain) NSData *compressed;
+@property (retain) NSString *name; //name will be used for naming the compressed result: test.dmg, test.zip
 
 -(SIPackage *)init;
 -(void)addURLToPackage:(NSURL *)aURL;
