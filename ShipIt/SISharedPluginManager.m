@@ -35,9 +35,9 @@
                                   forProtocol: @protocol(SIDeliveryPluginProtocol)];
 }
 
-+ (NSSet *)availablePackagePlugins
++ (NSSet *)availablePackagingPlugins
 {
-    return [self availablePluginsInDirectory: @"~/Library/Application Support/ShipIt/Plugins/Delivery" 
+    return [self availablePluginsInDirectory: @"~/Library/Application Support/ShipIt/Plugins/Packaging" 
                                   forProtocol: @protocol(SIPackagePluginProtocol)];
 }
 
@@ -46,9 +46,9 @@
     return [deliveryPlugins copy];
 }
 
-- (NSSet *)selectedPackagePlugins
+- (NSSet *)selectedPackagingPlugins
 {
-    return [packagePlugins copy];
+    return [packagingPlugins copy];
 }
 
 - (void)forDeliveryPluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument 
@@ -56,9 +56,9 @@
     [deliveryPlugins makeObjectsPerformSelector: aSelector withObject:anArgument];
 }
 
-- (void)forPackagePluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument
+- (void)forPackagingPluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument
 {
-    [packagePlugins makeObjectsPerformSelector: aSelector withObject:anArgument];
+    [packagingPlugins makeObjectsPerformSelector: aSelector withObject:anArgument];
 }
 
 @end
@@ -84,7 +84,7 @@
     return nil;
 }
 
-- (NSSet *)loadPackagePluginsFromPreferences 
+- (NSSet *)loadPackagingPluginsFromPreferences 
 {
     return nil;
 }
@@ -94,7 +94,7 @@
     NSArray * plugins = [NSBundle pathsForResourcesOfType:@"plugin" 
                                               inDirectory:[aDirectory stringByExpandingTildeInPath]];
     
-    NSMutableSet *plugins = [NSMutableSet setWithCapacity: [plugins count]];
+    NSMutableSet *set = [NSMutableSet setWithCapacity: [plugins count]];
     for(id path in plugins) {
         NSBundle *pluginBundle = [NSBundle bundleWithPath: path];
         NSDictionary* pluginDict = [pluginBundle infoDictionary];
@@ -105,9 +105,9 @@
         }
         if ([pluginClass conformsToProtocol: aProtocol] && 
             [pluginClass isKindOfClass: [NSObject class]]) {
-            [plugins addObject: pluginClass];
+            [set addObject: pluginClass];
         }
     }
-    return [NSSet setWithSet: plugins];
+    return [NSSet setWithSet: set];
 }
 @end

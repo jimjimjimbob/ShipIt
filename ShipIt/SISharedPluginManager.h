@@ -14,16 +14,16 @@
 @interface SISharedPluginManager : NSObject {
 @private
     NSSet *deliveryPlugins;
-    NSSet *packagePlugins;
+    NSSet *packagingPlugins;
 }
 
 + (SISharedPluginManager *) sharedInstance;
 + (NSSet *)availableDeliveryPlugins;
-+ (NSSet *)availablePackagePlugins;
++ (NSSet *)availablePackagingPlugins;
 - (NSSet *)selectedDeliveryPlugins;
-- (NSSet *)selectedPackagePlugins;
+- (NSSet *)selectedPackagingPlugins;
 - (void)forDeliveryPluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument;
-- (void)forPackagePluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument;
+- (void)forPackagingPluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument;
 @end
 
 @interface SISharedPluginManager (PrivateMethods){
@@ -34,7 +34,7 @@
 - (id)init;
 + (void)initialize;
 - (NSSet *)loadDeliveryPluginsFromPreferences;
-- (NSSet *)loadPackagePluginsFromPreferences;
+- (NSSet *)loadPackagingPluginsFromPreferences;
 + (NSSet *)availablePluginsInDirectory:(NSString *)aDirectory forProtocol:(Protocol *)aProtocol;
 
 @end
