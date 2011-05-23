@@ -1,19 +1,20 @@
 #import <Cocoa/Cocoa.h>
 #import "SIStatusItemView.h"
-#import "SICompressor.h"
-#import "SIQueue.h"
+#import "SISharedPluginManager.h"
 
 @interface ShipItController : NSObject {
     @private
     IBOutlet NSMenu *statusMenu;
     NSStatusItem *statusItem;
     SIStatusItemView *statusItemView;
-    SICompressor *compressor;
     NSMutableArray *packageQueue;
+    SISharedPluginManager *serviceManager;
+    
 }
 
 - (IBAction)packageAndShare: (id) sender;
 - (void)createAndEnqueuePackageWithFinderSelection;
+
 @end
 
 @interface ShipItController (Private)

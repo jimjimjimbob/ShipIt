@@ -25,8 +25,8 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 
 - (ShipItController *)init {
     self = [super init];
-    if(self) {
-        compressor = [[SIDeliveryController alloc] init];
+    if (self) {
+        serviceManager = [SISharedPluginManager sharedInstance];
     }
     return self;
 }
@@ -48,7 +48,6 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 }
 
 - (void)dealloc {
-    [compressor release];
 	[statusItem release];
     [statusItemView release];
 	[super dealloc];
@@ -65,18 +64,14 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
         [package addURLToPackage: url];
 	}
     [packageQueue addObject: package];
-    [self packageAndShare: nil];
+    [self packageAndShare: self];
 } 
 
 - (IBAction)packageAndShare: (id)sender {
     NSLog(@"Preparing to package and share.");
-    while ([packageQueue count] > 0) {
-        SIPackage *package = [packageQueue dequeue];
-        NSLog(@"Package retrieved.  Compressing.");
-        if ([compressor compressPackage: package]) {
-            NSLog(@"Package successfully compressed.");
-        } else {
-            NSLog(@"Package failed to be compressed.");
+    for (id package in packageQueue) {
+        if ([package isKindOfClass: [SIPackage class]]) {
+            //compress
         }
     }
 }
