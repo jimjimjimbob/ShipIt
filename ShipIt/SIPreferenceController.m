@@ -12,12 +12,15 @@
 @implementation SIPreferenceController
 
 @synthesize startUpToggle;
+@synthesize general;
+@synthesize about;
+@synthesize transition;
 
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
     if (self) {
-        
+        [self setCurrentView: general];
     }
     
     return self;
@@ -40,7 +43,50 @@
 	if ([self loginItemExistsWithLoginItemReference:loginItems ForPath:appPath]) {
 		[startUpToggle setState:NSOnState];
 	}
-	CFRelease(loginItems);   
+	CFRelease(loginItems); 
+    
+    
+    if(!currentView) {
+        currentView = general;   
+    }
+    
+    NSView *contentView = [[self window] contentView];
+    [contentView setWantsLayer:YES];
+    [contentView addSubview: currentView];
+    [contentView setHidden: NO];
+    
+    transition = [CATransition animation];
+    [transition setType:kCATransitionPush];
+    [transition setSubtype:kCATransitionFromLeft];
+    
+    NSDictionary *ani = [NSDictionary dictionaryWithObject:transition 
+                                                    forKey:@"subviews"];
+    [contentView setAnimations:ani];
+    [[self window] center];
+
+}
+- (void)setCurrentView:(NSView *)newView {
+    if (!currentView) {
+        currentView = newView;
+        return;
+    }
+    NSView *contentView = [[self window] contentView];
+    [[contentView animator] replaceSubview:currentView with:newView];
+    currentView = newView;
+}
+
+- (NSView *)currentView {
+    return currentView;
+}
+
+- (IBAction)showGeneralView:(id)sender {
+    [transition setSubtype:kCATransitionFromRight];
+    [self setCurrentView:general];
+}
+
+- (IBAction)showAboutView:(id)sender {
+    [transition setSubtype:kCATransitionFromRight];
+    [self setCurrentView:about];
 }
 
 - (IBAction)toggleStartUp:(id)sender {
@@ -61,7 +107,6 @@
 
 @implementation SIPreferenceController (PrivateMethods)
 - (void)enableLoginItemWithLoginItemsReference:(LSSharedFileListRef )theLoginItemsRefs ForPath:(NSString *)appPath {
-	// We call LSSharedFileListInsertItemURL to insert the item at the bottom of Login Items list.
 	CFURLRef url = (CFURLRef)[NSURL fileURLWithPath:appPath];
 	LSSharedFileListItemRef item = LSSharedFileListInsertItemURL(theLoginItemsRefs, kLSSharedFileListItemLast, NULL, NULL, url, NULL, NULL);		
 	if (item)
@@ -71,21 +116,19 @@
 - (void)disableLoginItemWithLoginItemsReference:(LSSharedFileListRef )theLoginItemsRefs ForPath:(NSString *)appPath {
 	UInt32 seedValue;
 	CFURLRef thePath;
-	// We're going to grab the contents of the shared file list (LSSharedFileListItemRef objects)
-	// and pop it in an array so we can iterate through it to find our item.
-	CFArrayRef loginItemsArray = LSSharedFileListCopySnapshot(theLoginItemsRefs, &seedValue);
-	for (id item in (NSArray *)loginItemsArray) {		
+
+	NSArray *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(theLoginItemsRefs, &seedValue);
+	for (id item in loginItemsArray) {		
 		LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)item;
 		if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &thePath, NULL) == noErr) {
-			if ([[(NSURL *)thePath path] hasPrefix:appPath]) {
-				LSSharedFileListItemRemove(theLoginItemsRefs, itemRef); // Deleting the item
+            NSString *urlPath = [(NSURL *)thePath path];
+			if ([urlPath compare:appPath] == NSOrderedSame) {
+				LSSharedFileListItemRemove(theLoginItemsRefs, itemRef);
 			}
-			// Docs for LSSharedFileListItemResolve say we're responsible
-			// for releasing the CFURLRef that is returned
 			CFRelease(thePath);
 		}		
 	}
-	CFRelease(loginItemsArray);
+    [loginItemsArray release];
 }
 
 - (BOOL)loginItemExistsWithLoginItemReference:(LSSharedFileListRef)theLoginItemsRefs ForPath:(NSString *)appPath {
@@ -93,23 +136,19 @@
 	UInt32 seedValue;
 	CFURLRef thePath;
     
-	// We're going to grab the contents of the shared file list (LSSharedFileListItemRef objects)
-	// and pop it in an array so we can iterate through it to find our item.
-	CFArrayRef loginItemsArray = LSSharedFileListCopySnapshot(theLoginItemsRefs, &seedValue);
-	for (id item in (NSArray *)loginItemsArray) {    
+	NSArray *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(theLoginItemsRefs, &seedValue);
+	for (id item in loginItemsArray) {    
 		LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)item;
 		if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &thePath, NULL) == noErr) {
-			if ([[(NSURL *)thePath path] hasPrefix:appPath]) {
+            NSString *urlPath = [(NSURL *)thePath path];
+			if ([urlPath compare:appPath] == NSOrderedSame) {
 				found = YES;
-				//break;
+				break;
 			}
 		}
-		// Docs for LSSharedFileListItemResolve say we're responsible
-		// for releasing the CFURLRef that is returned
 		CFRelease(thePath);
 	}
-	CFRelease(loginItemsArray);
-    
+    [loginItemsArray release];
 	return found;
 }
 @end

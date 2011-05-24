@@ -7,14 +7,26 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import <QuartzCore/CoreAnimation.h>
 
 @interface SIPreferenceController : NSWindowController {
 @private
     IBOutlet NSButton *startUpToggle;
+    IBOutlet NSView *general;
+    IBOutlet NSView *about;
+    IBOutlet NSView *currentView;
+    CATransition *transition;
+
 }
 @property (retain) IBOutlet NSButton *startUpToggle;
+@property (retain) CATransition *transition;
+@property (retain) IBOutlet NSView *general;
+@property (retain) IBOutlet NSView *about;
+@property (retain) IBOutlet NSView *currentView;
 
+- (void)setCurrentView: (NSView *) aNewView;
+- (IBAction)showGeneralView: (id) sender;
+- (IBAction)showAboutView: (id) sender;
 - (IBAction)toggleStartUp:(id)sender;
 
 @end
