@@ -48,8 +48,8 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 }
 
 - (void)dealloc {
-	[statusItem release];
     [statusItemView release];
+	[statusItem release];
 	[super dealloc];
 }
 
@@ -65,6 +65,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 	}
     [packageQueue addObject: package];
     [self packageAndShare: self];
+    [package release];
 } 
 
 - (IBAction)packageAndShare: (id)sender {
@@ -108,6 +109,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
             [package addURLToPackage: [NSURL URLWithString: path]];
         }
         [packageQueue addObject: package];
+        [package release];
     }
     [self packageAndShare: nil];
     return YES;

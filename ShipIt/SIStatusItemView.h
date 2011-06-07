@@ -18,9 +18,9 @@
 	BOOL isMenuVisible;
     BOOL isDragActive;
 }
-@property (retain, nonatomic) NSObject *delegate;
-@property (retain, nonatomic) NSStatusItem *statusItem;
-@property (retain, nonatomic) NSString *title;
+@property (retain) NSObject *delegate;
+@property (retain) NSStatusItem *statusItem;
+@property (retain) NSString *title;
 
 - (void)setTitle:(NSString *)newTitle;
 - (NSString *)title;
