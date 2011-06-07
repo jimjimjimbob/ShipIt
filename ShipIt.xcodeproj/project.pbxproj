@@ -16,13 +16,16 @@
 		143AD9581380C43100E69CB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143AD9561380C43100E69CB3 /* InfoPlist.strings */; };
 		143AD95B1380C43100E69CB3 /* ShipItTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 143AD95A1380C43100E69CB3 /* ShipItTests.h */; };
 		143AD95D1380C43100E69CB3 /* ShipItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD95C1380C43100E69CB3 /* ShipItTests.m */; };
-		143AD96F1380C48C00E69CB3 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9671380C48C00E69CB3 /* AppController.m */; };
-		143AD9701380C48C00E69CB3 /* CMCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9691380C48C00E69CB3 /* CMCompressor.m */; };
-		143AD9711380C48C00E69CB3 /* CMDroppableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD96B1380C48C00E69CB3 /* CMDroppableView.m */; };
-		143AD9721380C48C00E69CB3 /* CMPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD96D1380C48C00E69CB3 /* CMPackage.m */; };
+		143AD96F1380C48C00E69CB3 /* ShipItController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD9671380C48C00E69CB3 /* ShipItController.m */; };
 		143AD9741380C55A00E69CB3 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9731380C55A00E69CB3 /* Carbon.framework */; };
 		143AD9761380C5A500E69CB3 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AD9751380C5A500E69CB3 /* ScriptingBridge.framework */; };
-		143AD97C1380C9E100E69CB3 /* CMQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 143AD97B1380C9E100E69CB3 /* CMQueue.m */; };
+		144491A7138829620012CE1A /* SIDeliveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444919C138829620012CE1A /* SIDeliveryController.m */; };
+		144491A8138829620012CE1A /* SIStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1444919F138829620012CE1A /* SIStatusItemView.m */; };
+		144491A9138829620012CE1A /* SIPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 144491A1138829620012CE1A /* SIPackage.m */; };
+		144491AA138829620012CE1A /* SIPreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144491A3138829620012CE1A /* SIPreferenceController.m */; };
+		14E6192913884C8B0063245E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E6192813884C8B0063245E /* libz.dylib */; };
+		14E6192F1388949E0063245E /* SISharedPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E6192E1388949E0063245E /* SISharedPluginManager.m */; };
+		14EC5CFB138BEAE200FBA2A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EC5CFA138BEAE200FBA2A8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,19 +56,26 @@
 		143AD9591380C43100E69CB3 /* ShipItTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShipItTests-Prefix.pch"; sourceTree = "<group>"; };
 		143AD95A1380C43100E69CB3 /* ShipItTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipItTests.h; sourceTree = "<group>"; };
 		143AD95C1380C43100E69CB3 /* ShipItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipItTests.m; sourceTree = "<group>"; };
-		143AD9661380C48C00E69CB3 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
-		143AD9671380C48C00E69CB3 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		143AD9681380C48C00E69CB3 /* CMCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCompressor.h; sourceTree = "<group>"; };
-		143AD9691380C48C00E69CB3 /* CMCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCompressor.m; sourceTree = "<group>"; };
-		143AD96A1380C48C00E69CB3 /* CMDroppableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDroppableView.h; sourceTree = "<group>"; };
-		143AD96B1380C48C00E69CB3 /* CMDroppableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDroppableView.m; sourceTree = "<group>"; };
-		143AD96C1380C48C00E69CB3 /* CMPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPackage.h; sourceTree = "<group>"; };
-		143AD96D1380C48C00E69CB3 /* CMPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPackage.m; sourceTree = "<group>"; };
+		143AD9661380C48C00E69CB3 /* ShipItController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShipItController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		143AD9671380C48C00E69CB3 /* ShipItController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ShipItController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		143AD96E1380C48C00E69CB3 /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		143AD9731380C55A00E69CB3 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		143AD9751380C5A500E69CB3 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
-		143AD97A1380C9E100E69CB3 /* CMQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMQueue.h; sourceTree = "<group>"; };
-		143AD97B1380C9E100E69CB3 /* CMQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQueue.m; sourceTree = "<group>"; };
+		1444919B138829620012CE1A /* SIDeliveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDeliveryController.h; sourceTree = "<group>"; };
+		1444919C138829620012CE1A /* SIDeliveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIDeliveryController.m; sourceTree = "<group>"; };
+		1444919D138829620012CE1A /* SIDeliveryPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDeliveryPluginProtocol.h; sourceTree = "<group>"; };
+		1444919E138829620012CE1A /* SIStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIStatusItemView.h; sourceTree = "<group>"; };
+		1444919F138829620012CE1A /* SIStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIStatusItemView.m; sourceTree = "<group>"; };
+		144491A0138829620012CE1A /* SIPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIPackage.h; sourceTree = "<group>"; };
+		144491A1138829620012CE1A /* SIPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIPackage.m; sourceTree = "<group>"; };
+		144491A2138829620012CE1A /* SIPreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIPreferenceController.h; sourceTree = "<group>"; };
+		144491A3138829620012CE1A /* SIPreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIPreferenceController.m; sourceTree = "<group>"; };
+		14E6192813884C8B0063245E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		14E6192B13887BA90063245E /* SIPackagingPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SIPackagingPluginProtocol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		14E6192C138880830063245E /* SIPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SIPluginProtocol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		14E6192D1388949E0063245E /* SISharedPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SISharedPluginManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		14E6192E1388949E0063245E /* SISharedPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SISharedPluginManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		14EC5CFA138BEAE200FBA2A8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EC5CFB138BEAE200FBA2A8 /* QuartzCore.framework in Frameworks */,
+				14E6192913884C8B0063245E /* libz.dylib in Frameworks */,
 				143AD9761380C5A500E69CB3 /* ScriptingBridge.framework in Frameworks */,
 				143AD9741380C55A00E69CB3 /* Carbon.framework in Frameworks */,
 				143AD9331380C43000E69CB3 /* Cocoa.framework in Frameworks */,
@@ -112,6 +124,8 @@
 		143AD9311380C43000E69CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14EC5CFA138BEAE200FBA2A8 /* QuartzCore.framework */,
+				14E6192813884C8B0063245E /* libz.dylib */,
 				143AD9751380C5A500E69CB3 /* ScriptingBridge.framework */,
 				143AD9731380C55A00E69CB3 /* Carbon.framework */,
 				143AD9321380C43000E69CB3 /* Cocoa.framework */,
@@ -133,19 +147,25 @@
 		143AD9381380C43000E69CB3 /* ShipIt */ = {
 			isa = PBXGroup;
 			children = (
-				143AD9661380C48C00E69CB3 /* AppController.h */,
-				143AD9671380C48C00E69CB3 /* AppController.m */,
-				143AD9681380C48C00E69CB3 /* CMCompressor.h */,
-				143AD9691380C48C00E69CB3 /* CMCompressor.m */,
-				143AD96A1380C48C00E69CB3 /* CMDroppableView.h */,
-				143AD96B1380C48C00E69CB3 /* CMDroppableView.m */,
-				143AD96C1380C48C00E69CB3 /* CMPackage.h */,
-				143AD96D1380C48C00E69CB3 /* CMPackage.m */,
-				143AD97A1380C9E100E69CB3 /* CMQueue.h */,
-				143AD97B1380C9E100E69CB3 /* CMQueue.m */,
+				14A73AE6138C25E1004AEB5F /* Plugins */,
+				1444919B138829620012CE1A /* SIDeliveryController.h */,
+				1444919C138829620012CE1A /* SIDeliveryController.m */,
+				1444919D138829620012CE1A /* SIDeliveryPluginProtocol.h */,
+				1444919E138829620012CE1A /* SIStatusItemView.h */,
+				1444919F138829620012CE1A /* SIStatusItemView.m */,
+				144491A0138829620012CE1A /* SIPackage.h */,
+				144491A1138829620012CE1A /* SIPackage.m */,
+				144491A2138829620012CE1A /* SIPreferenceController.h */,
+				144491A3138829620012CE1A /* SIPreferenceController.m */,
+				143AD9661380C48C00E69CB3 /* ShipItController.h */,
+				143AD9671380C48C00E69CB3 /* ShipItController.m */,
 				143AD96E1380C48C00E69CB3 /* Finder.h */,
 				143AD9471380C43000E69CB3 /* MainMenu.xib */,
 				143AD9391380C43000E69CB3 /* Supporting Files */,
+				14E6192B13887BA90063245E /* SIPackagingPluginProtocol.h */,
+				14E6192C138880830063245E /* SIPluginProtocol.h */,
+				14E6192D1388949E0063245E /* SISharedPluginManager.h */,
+				14E6192E1388949E0063245E /* SISharedPluginManager.m */,
 			);
 			path = ShipIt;
 			sourceTree = "<group>";
@@ -181,6 +201,14 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		14A73AE6138C25E1004AEB5F /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Plugins;
+			path = ShipIt/Plugins;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -288,11 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				143AD9401380C43000E69CB3 /* main.m in Sources */,
-				143AD96F1380C48C00E69CB3 /* AppController.m in Sources */,
-				143AD9701380C48C00E69CB3 /* CMCompressor.m in Sources */,
-				143AD9711380C48C00E69CB3 /* CMDroppableView.m in Sources */,
-				143AD9721380C48C00E69CB3 /* CMPackage.m in Sources */,
-				143AD97C1380C9E100E69CB3 /* CMQueue.m in Sources */,
+				143AD96F1380C48C00E69CB3 /* ShipItController.m in Sources */,
+				144491A7138829620012CE1A /* SIDeliveryController.m in Sources */,
+				144491A8138829620012CE1A /* SIStatusItemView.m in Sources */,
+				144491A9138829620012CE1A /* SIPackage.m in Sources */,
+				144491AA138829620012CE1A /* SIPreferenceController.m in Sources */,
+				14E6192F1388949E0063245E /* SISharedPluginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +504,7 @@
 				143AD9621380C43100E69CB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		143AD9631380C43100E69CB3 /* Build configuration list for PBXNativeTarget "ShipItTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +513,7 @@
 				143AD9651380C43100E69CB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
