@@ -1,5 +1,5 @@
 //
-//  SIPackagePluginProtocol.h
+//  SIPackagingPluginProtocol.h
 //  ShipIt
 //
 //  Created by doomspork on 5/21/11.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SIPluginProtocol.h"
 
-@protocol SIPackagePluginProtocol <SIPluginProtocol>
+@protocol SIPackagingPluginProtocol <SIPluginProtocol>
 + (NSData *)packageURLArrayAsData: (NSArray *)urls;
 + (NSString *)extension;
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SIDeliveryPluginProtocol.h"
-#import "SIPackagePluginProtocol.h"
+#import "SIPackagingPluginProtocol.h"
 #import "SIPluginProtocol.h"
 
 @interface SISharedPluginManager : NSObject {

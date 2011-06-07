@@ -14,4 +14,5 @@
 - (void)terminatePlugin;
 + (NSString *)name;
 + (NSString *)description;
++ (NSView *)view;
 @end
