@@ -28,6 +28,11 @@
 
 - (void)dealloc
 {
+    [currentView release];
+    [about release];
+    [general release];
+    [startUpToggle release];
+    [transition release];
     [super dealloc];
 }
 
@@ -55,23 +60,30 @@
     [contentView addSubview: currentView];
     [contentView setHidden: NO];
     
-    transition = [CATransition animation];
-    [transition setType:kCATransitionPush];
-    [transition setSubtype:kCATransitionFromLeft];
-    
+    transition = [[CATransition animation] retain];
+    [transition setType:kCATransitionFade];
     NSDictionary *ani = [NSDictionary dictionaryWithObject:transition 
                                                     forKey:@"subviews"];
+    
     [contentView setAnimations:ani];
     [[self window] center];
-
 }
+
 - (void)setCurrentView:(NSView *)newView {
+    [newView retain];
     if (!currentView) {
         currentView = newView;
         return;
     }
+    
+    [self resizeWindowForContentSize: [newView frame].size];
     NSView *contentView = [[self window] contentView];
+
+    NSPoint origin = NSMakePoint(0, 0);
+    [newView setFrameOrigin: origin];
     [[contentView animator] replaceSubview:currentView with:newView];
+    
+    [currentView release];
     currentView = newView;
 }
 
@@ -85,7 +97,7 @@
 }
 
 - (IBAction)showAboutView:(id)sender {
-    [transition setSubtype:kCATransitionFromRight];
+    [transition setSubtype:kCATransitionFromLeft];
     [self setCurrentView:about];
 }
 
@@ -102,10 +114,19 @@
     }
 }
 
-
 @end
 
 @implementation SIPreferenceController (PrivateMethods)
+
+- (void)resizeWindowForContentSize:(NSSize) size {
+    NSWindow *window = [self window];
+    
+    NSRect windowFrame = [window contentRectForFrameRect:[window frame]];
+    NSRect newWindowFrame = [window frameRectForContentRect:
+                             NSMakeRect( NSMinX( windowFrame ), NSMaxY( windowFrame ) - size.height, size.width, size.height )];
+    [window setFrame:newWindowFrame display:YES animate:[window isVisible]];
+}
+
 - (void)enableLoginItemWithLoginItemsReference:(LSSharedFileListRef )theLoginItemsRefs ForPath:(NSString *)appPath {
 	CFURLRef url = (CFURLRef)[NSURL fileURLWithPath:appPath];
 	LSSharedFileListItemRef item = LSSharedFileListInsertItemURL(theLoginItemsRefs, kLSSharedFileListItemLast, NULL, NULL, url, NULL, NULL);		
@@ -137,6 +158,7 @@
 	CFURLRef thePath;
     
 	NSArray *loginItemsArray = (NSArray *)LSSharedFileListCopySnapshot(theLoginItemsRefs, &seedValue);
+    [loginItemsArray retain];
 	for (id item in loginItemsArray) {    
 		LSSharedFileListItemRef itemRef = (LSSharedFileListItemRef)item;
 		if (LSSharedFileListItemResolve(itemRef, 0, (CFURLRef*) &thePath, NULL) == noErr) {
