@@ -1,6 +1,10 @@
 Codename ShipIt
-Small app, big shipments.
+---------------
 
-A distribution tool for codez4mac.com and beyond.
+ShipIt aims to provide a sensible solution to those individuals who truly believe caring is sharing.  By allowing the user to select resources and easily package and distribute them, ShipIt takes the work out of getting your data online and accessible.
 
-Quickly create packages (data archives) and ship them off!
++ Package and compress files, folders, and other resources.
++ Content plugins allow generic files such as readme and copyright notices to be included seamlessly
++ Automatically upload your packages to your favorite file-sharing services (RapidShare, MegaUpload, Dropbox, ...)
++ Robust plugin architecture allows you to decide, and create, the type of packaging, content, and distribution means best suited for your needs
+
