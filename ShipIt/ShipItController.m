@@ -26,7 +26,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 - (ShipItController *)init {
     self = [super init];
     if (self) {
-        serviceManager = [SISharedPluginManager sharedInstance];
+        serviceManager = [SIPluginController sharedInstance];
     }
     return self;
 }

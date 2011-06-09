@@ -24,7 +24,7 @@
 		144491A9138829620012CE1A /* SIPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 144491A1138829620012CE1A /* SIPackage.m */; };
 		144491AA138829620012CE1A /* SIPreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144491A3138829620012CE1A /* SIPreferenceController.m */; };
 		14E6192913884C8B0063245E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E6192813884C8B0063245E /* libz.dylib */; };
-		14E6192F1388949E0063245E /* SISharedPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E6192E1388949E0063245E /* SISharedPluginManager.m */; };
+		14E6192F1388949E0063245E /* SIPluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E6192E1388949E0063245E /* SIPluginController.m */; };
 		14EC5CFB138BEAE200FBA2A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EC5CFA138BEAE200FBA2A8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +73,8 @@
 		14E6192813884C8B0063245E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		14E6192B13887BA90063245E /* SIPackagingPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SIPackagingPluginProtocol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		14E6192C138880830063245E /* SIPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SIPluginProtocol.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		14E6192D1388949E0063245E /* SISharedPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SISharedPluginManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		14E6192E1388949E0063245E /* SISharedPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SISharedPluginManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		14E6192D1388949E0063245E /* SIPluginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = SIPluginController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		14E6192E1388949E0063245E /* SIPluginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SIPluginController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		14EC5CFA138BEAE200FBA2A8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -164,8 +164,8 @@
 				143AD9391380C43000E69CB3 /* Supporting Files */,
 				14E6192B13887BA90063245E /* SIPackagingPluginProtocol.h */,
 				14E6192C138880830063245E /* SIPluginProtocol.h */,
-				14E6192D1388949E0063245E /* SISharedPluginManager.h */,
-				14E6192E1388949E0063245E /* SISharedPluginManager.m */,
+				14E6192D1388949E0063245E /* SIPluginController.h */,
+				14E6192E1388949E0063245E /* SIPluginController.m */,
 			);
 			path = ShipIt;
 			sourceTree = "<group>";
@@ -321,7 +321,7 @@
 				144491A8138829620012CE1A /* SIStatusItemView.m in Sources */,
 				144491A9138829620012CE1A /* SIPackage.m in Sources */,
 				144491AA138829620012CE1A /* SIPreferenceController.m in Sources */,
-				14E6192F1388949E0063245E /* SISharedPluginManager.m in Sources */,
+				14E6192F1388949E0063245E /* SIPluginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
