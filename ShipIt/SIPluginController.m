@@ -1,5 +1,5 @@
 //
-//  SISharedPluginManager.m
+//  SIPluginController.m
 //  ShipIt
 //
 //  Created by doomspork on 5/21/11.
@@ -8,16 +8,16 @@
 
 #import "SIPluginController.h"
 
-@implementation SISharedPluginManager 
+@implementation SIPluginController 
 
-+ (SISharedPluginManager *) sharedInstance 
++ (SIPluginController *) sharedInstance 
 {                                                                    
     static SIPluginController *sharedSingleton;
     
     @synchronized(self)
     {
         if (!sharedSingleton)
-            sharedSingleton = [[SISharedPluginManager alloc] init];
+            sharedSingleton = [[SIPluginController alloc] init];
         
         return sharedSingleton;
     }                                                                     
