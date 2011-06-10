@@ -13,29 +13,20 @@
 
 @interface PluginController : NSObject {
 @private
-    NSSet *deliveryPlugins;
-    NSSet *packagingPlugins;
+    NSSet *plugins;
 }
 
 + (PluginController *) sharedInstance;
-+ (NSSet *)availableDeliveryPlugins;
-+ (NSSet *)availablePackagingPlugins;
-- (NSSet *)selectedDeliveryPlugins;
-- (NSSet *)selectedPackagingPlugins;
-- (void)forDeliveryPluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument;
-- (void)forPackagingPluginsPerformSelector:(SEL)aSelector withObject:(id)anArgument;
 @end
 
-@interface PluginController (PrivateMethods){
+@interface PluginController (PrivateMethods) {
 @private
 
 }
 
 - (id)init;
 + (void)initialize;
-- (NSSet *)loadDeliveryPluginsFromPreferences;
-- (NSSet *)loadPackagingPluginsFromPreferences;
-+ (NSSet *)availablePluginsInDirectory:(NSString *)aDirectory forProtocol:(Protocol *)aProtocol;
++ (NSSet *)loadPlugins;
 
 @end
 
