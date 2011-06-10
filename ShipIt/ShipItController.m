@@ -1,7 +1,6 @@
 #import "ShipItController.h"
 #import "Finder.h"
 #import "SIPackage.h"
-#import "SIDeliveryController.h"
 #import <Carbon/Carbon.h>
 
 OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
@@ -26,7 +25,7 @@ OSStatus myHotKeyHandler(EventHandlerCallRef nextHandler, EventRef anEvent, void
 - (ShipItController *)init {
     self = [super init];
     if (self) {
-        serviceManager = [SIPluginController sharedInstance];
+        pluginController = [PluginController sharedInstance];
     }
     return self;
 }

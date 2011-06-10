@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
 #import "SIStatusItemView.h"
-#import "SIPluginController.h"
+#import "PluginController.h"
 
 @interface ShipItController : NSObject {
     @private
@@ -8,7 +8,7 @@
     NSStatusItem *statusItem;
     SIStatusItemView *statusItemView;
     NSMutableArray *packageQueue;
-    SIPluginController *serviceManager;
+    PluginController *pluginController;
     
 }
 
